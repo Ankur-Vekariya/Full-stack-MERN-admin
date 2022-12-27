@@ -12,4 +12,4 @@ export const api = createApi({
   }),
 });
 
-export const { useGetUserWuery } = api;
+export const { useGetUserQuery } = api;
