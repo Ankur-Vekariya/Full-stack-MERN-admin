@@ -17,7 +17,7 @@ import ProductStat from "./models/ProductStat.js";
 import {
   dataUser,
   dataProduct,
-  DataProductStat,
+  dataProductStat,
 } from "../server/data/index.js";
 
 // configurations
@@ -46,6 +46,7 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
     // User.insertMany(dataUser)
-    Product.insertMany(dataProdu);
+    // Product.insertMany(dataProduct)
+    // ProductStat.insertMany(dataProductStat);
   })
   .catch((error) => console.log(`${error} can not connect`));
