@@ -43,6 +43,31 @@ const Product = (props) => {
         <Rating name="read-only" value={props?.data?.rating} readOnly />
         <Typography variant="body2">{props?.data?.description}</Typography>
       </CardContent>
+      <CardActions>
+        <Button
+        variant="primary"
+        size="small"
+        onClick={()=> setIsExpanded(!isExpanded)}
+        >
+          See More
+        </Button>
+      </CardActions>
+      <Collapse 
+      in={isExpanded}
+      timeout="auto"
+      unmountOnExit
+      sx={{
+        color: theme.palette.neutral[300]
+
+      }}
+      >
+      <CardContent>
+        <Typography>{props.data._id}</Typography>
+        <Typography>{props.data.supply}</Typography>
+        <Typography>{props.data.stat.yearlyTotalSoldUnits}</Typography>
+
+      </CardContent>
+      </Collapse>
     </Card>
   );
 };
