@@ -14,10 +14,12 @@ import salesRoutes from "./routes/sales.js";
 import User from "../server/models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
+import Transaction from "./models/Transaction.js";
 import {
   dataUser,
   dataProduct,
   dataProductStat,
+  dataTransaction
 } from "../server/data/index.js";
 
 // configurations
@@ -47,6 +49,7 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
     // User.insertMany(dataUser)
     // Product.insertMany(dataProduct)
+// Transaction.insertMany(dataTransaction)
     // ProductStat.insertMany(dataProductStat);
   })
   .catch((error) => console.log(`${error} can not connect`));
